@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SM Group</title>
+  <img src="file:///C:/Users/user/Downloads/OLD%20DOWNLOAD%20FILES/sm%20groups%20logo.png" alt="width">
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #c70000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    header h1:hover {
+      transform: scale(1.1);
+    }
+
+    nav a {
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd6d6;
+    }
+
+    /* ===== HERO SECTION ===== */
+    section#home {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ff0000, #990000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #home h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    section#about {
+      min-height: 100vh;
+      padding: 6rem 3rem 3rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #about h2 {
+      color: #c70000;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    #about p {
+      max-width: 800px;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    section#services {
+      background-color: #f8f8f8;
+      min-height: 100vh;
+      padding: 6rem 2rem 3rem 2rem;
+      text-align: center;
+    }
+
+    #services h2 {
+      color: #c70000;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(199,0,0,0.3);
+    }
+
+    .card h3 {
+      color: #c70000;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    section#contact {
+      min-height: 100vh;
+      padding: 6rem 3rem 3rem 3rem;
+      text-align: center;
+    }
+
+    #contact h2 {
+      color: #c70000;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #c70000;
+    }
+
+    button {
+      background-color: #c70000;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1a1a;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    footer p span {
+      color: #ff4d4d;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>SM Group</h1>
+    <nav>
+      <a href="home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HOME ===== -->
+  <section id="home">
+    <h2>Welcome to SM Group</h2>
+    <p>We are a dynamic and innovative organization dedicated to delivering excellence in every project we undertake. Our focus is on quality, innovation, and customer satisfaction.</p>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>SM Group has been at the forefront of industry innovation for years. Our team of professionals strives to bring creative solutions and exceptional service to clients worldwide. With a strong commitment to reliability and integrity, we continue to build lasting partnerships based on trust and success.</p>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <div class="card">
+        <h3>Consulting</h3>
+        <p>Expert business and project consulting to help you grow strategically.</p>
+      </div>
+      <div class="card">
+        <h3>Development</h3>
+        <p>Building reliable and modern digital solutions that scale with your needs.</p>
+      </div>
+      <div class="card">
+        <h3>Support</h3>
+        <p>Dedicated support team ensuring your success and long-term stability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 <span>SM Group</span> — All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== JS SCROLL EFFECT ===== -->
+  <script>
+    // Smooth scroll active link highlight
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY + 80;
+      navLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.style.color = '#fff';
+          link.style.borderBottom = '2px solid #fff';
+        } else {
+          link.style.color = '#ffd6d6';
+          link.style.borderBottom = 'none';
+        }
+      });
+    });
+
+    // Prevent form submit for demo
+    document.querySelector('.contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Message Sent! (Demo)');
+    });
+  </script>
+</body>
+</html>
